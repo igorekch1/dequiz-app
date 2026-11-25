@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# deQuiz
 
-## Getting Started
+AI-powered Web3 quiz platform on Base. Users take a quiz, and their results are turned into a unique AI-generated artwork minted as an ERC-721 NFT.
 
-First, run the development server:
+Built as a Web3 hackathon project in 2024 by the EZIC-IO team. My focus was the Web3 integration: wallet interactions, NFT minting, OpenAI image generation and IPFS storage.
+
+- Live demo: https://dequiz-app.vercel.app
+- Devfolio (screenshots and demo): https://devfolio.co/projects/dequiz-b35c
+- Original repository: https://github.com/EZIC-IO/dequiz-app
+
+## How it works
+
+1. The user connects a wallet and takes a quiz.
+2. Quiz results are used to build a prompt for OpenAI image generation.
+3. The generated image and NFT metadata are uploaded to IPFS.
+4. The user mints a unique ERC-721 NFT on Base.
+
+## Tech stack
+
+- Next.js, React, TypeScript
+- Tailwind CSS, shadcn/ui
+- Wagmi, thirdweb
+- Base (Ethereum L2), ERC-721
+- OpenAI API, IPFS
+- pnpm, ESLint, Prettier
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+cp .env.example .env.local   # fill in the required keys
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## License
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Apache-2.0. See [LICENSE](LICENSE).
